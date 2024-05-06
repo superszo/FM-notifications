@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    box-sizing: border-box;
+    color: #5E6778;
+    font-size: 16px;
+}
+
+body {
+    background-color: #F7FAFD;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 730px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.top-section {
+    margin: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#heading {
+    font-size: 24px;
+    font-weight: 800;
+    color: #1C202B;
+    --notifications-count: '3';
+    display: inline-flex;
+    align-items:center;
+}
+
+#heading::after {
+    content: var(--notifications-count);
+    width: 32px;
+    height: 25px;
+    background-color: #0A327B;
+    color: #FFFFFF;
+    border-radius: 6px;
+    margin-left: 12px;
+    font-weight: 800;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+#mark-read {
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+
+#mark-read:hover {
+    color: #0A327B;
+}
+
+.notification {
+    margin: 0 30px;
+    display: flex;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.notification + .notification {
+    margin-top: 8px;
+}
+
+.user-image {
+    width: 45px;
+    height: 45px;
+    margin: 18px 20px;
+}
+
+.notification-text {
+    font-weight: 400;
+    margin-top: 18px;
+}
+
+.user-name {
+    color: #1C202B;
+    font-weight: 800;
+}
+
+span:hover {
+    color: #0A327B;
+}
+
+.post-name {
+    font-weight: 800; 
+}
+
+.timestamp {
+    color: #939CAD;
+}
+
+.unread {
+    background-color: #F7FAFD;
+}
+
+.unread .notification-text::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: #F65552;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.post-img {
+    width: 45px;
+    height: 45px;
+    align-self: center;
+    justify-self: flex-end;
+    margin-right: 20px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.message {
+    padding: 20px;
+    border: 1px solid #DDE7EE;
+    border-radius: 5px;
+    color: #5E6778;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.message:hover {
+    background-color: #DDE7EE;
+}
+
+.group-name {
+    color: #0A327B;
+    font-weight: 800;
+}
+
+@media screen and (max-width:768px) {
+    .card {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    * {
+        font-size: 14px;
+    }
+
+    #heading {
+        font-size: 20px;
+    }
+
+    body {
+        height: auto;
+    }
+}
+
+
+
+
+
